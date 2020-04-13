@@ -1,0 +1,10 @@
+D:\mine\toy\SmartLampLight\bin\Debug\SmartLampLight.exe.config
+D:\mine\toy\SmartLampLight\bin\Debug\SmartLampLight.exe
+D:\mine\toy\SmartLampLight\bin\Debug\SmartLampLight.pdb
+D:\mine\toy\SmartLampLight\obj\Debug\SmartLampLight.csprojAssemblyReference.cache
+D:\mine\toy\SmartLampLight\obj\Debug\SmartLampLight.Form1.resources
+D:\mine\toy\SmartLampLight\obj\Debug\SmartLampLight.Properties.Resources.resources
+D:\mine\toy\SmartLampLight\obj\Debug\SmartLampLight.csproj.GenerateResource.cache
+D:\mine\toy\SmartLampLight\obj\Debug\SmartLampLight.exe
+D:\mine\toy\SmartLampLight\obj\Debug\SmartLampLight.pdb
+D:\mine\toy\SmartLampLight\obj\Debug\SmartLampLight.csproj.CoreCompileInputs.cache
