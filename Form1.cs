@@ -379,6 +379,8 @@ namespace SmartLampLight
                 stopThread(bw);
                 bw = null;
                 stopFlag = true;
+                MessageBox.Show("[Error] Please check your usb,\ntry once more!", "System");
+                return;
             }
 
             string output = line.Data.ToString();
