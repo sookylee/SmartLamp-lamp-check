@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Collections;
 using System.Timers;
-
+using System.CodeDom;
 
 namespace SmartLampLight
 {
@@ -373,13 +373,19 @@ namespace SmartLampLight
             if (line == null) return;
             string[] temp = new string[18];
             temp.Initialize();
-            
+
+            if(line.Data == null)
+            {
+                stopThread(bw);
+                bw = null;
+                stopFlag = true;
+            }
+
             string output = line.Data.ToString();
             if (output.IndexOf("-s") != -1) return;
             if (output.IndexOf("SmartLampMcuComm") == -1) return;
             if (output.IndexOf("(") != -1) return;
-
-            removeBlank(output, temp);
+                removeBlank(output, temp);
             string stat = "";
             if (temp[10] == "00") stat = "OFF";
             else if (temp[10] == "01") stat = "ON ";
@@ -389,10 +395,11 @@ namespace SmartLampLight
             mode.TryGetValue(temp[12], out modeName);
             string autoName;
             autoMode.TryGetValue(temp[14], out autoName);
-            string tmp = temp[0] + "  " + temp[1] + "   " + temp[6] + "\t" + stat + "\t" + autoName+ "\t" + modeName + "\tBrightness: " + temp[11];
+            string tmp = temp[0] + "  " + temp[1] + "   " + temp[6] + "\t" + stat + "\t" + autoName + "\t" + modeName + "\tBrightness: " + temp[11];
             //tmp = temp[0] + "\t" + temp[1] + "\tMode: " + modeName + "\tBrightness: " + temp[11];
 
             setShowBox(tmp);
+            
         }
 
         private delegate void setShowBoxInvoker(string text);
