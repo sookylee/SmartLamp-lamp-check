@@ -225,6 +225,7 @@ namespace SmartLampLight
             proc.Close();
             installProgressBar.Visible = false;
             installingLabel.Visible = false;
+            installProgressBar.Value = 0;
         }
 
         private void timer_tick(object sender, EventArgs e)
